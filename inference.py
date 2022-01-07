@@ -14,26 +14,4 @@ def predict(df):
     predictions = model.predict(df)
     output = [class_names[class_predicted] for class_predicted in predictions]
     return output
-hm = 33.8
-hb = 11.1
-ery =4.18
-leu = 4.6	
-thr=150
-mch = 26.6
-mchc = 32.8
-mcv = 80.9
-age = 33
-sex = 'F'
-df = pd.DataFrame({ 
-   'HAEMATOCRIT':[hm],
-   'HAEMOGLOBINS':[hb], 
-    'ERYTHROCYTE':[ery], 
-    'LEUCOCYTE':[leu], 
-    'THROMBOCYTE':[thr],
-    'MCH':[mch],
-    'MCHC':[mchc], 
-    'MCV':[mcv],
-    'AGE':[age],
-    'SEX':[sex]
-})
-print(predict(df))  
+ 
